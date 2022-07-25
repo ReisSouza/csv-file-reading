@@ -22,5 +22,7 @@ module.exports = {
     'import/no-duplicates': 'off',
     'import/no-dynamic-require': 'off',
     'import/prefer-default-export': 'off',
+    'no-unreachable-loop': ['error', { ignore: ['ForInStatement', 'ForOfStatement'] }],
+    'no-restricted-syntax': ['off', 'FunctionExpression', 'WithStatement', "BinaryExpression[operator='in']"],
   },
 };
