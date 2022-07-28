@@ -1,4 +1,3 @@
-/* eslint-disable no-unsafe-optional-chaining */
 import { Router, Request, Response } from 'express';
 import { Readable } from 'stream';
 import readLine from 'readline';
@@ -6,6 +5,7 @@ import multer from 'multer';
 
 import { ListType } from './types/list';
 import { client } from './database/client';
+import { getListBookAllControllerIndex } from './modules/useCases/getListBookAll';
 
 const multerConfig = multer();
 
@@ -58,5 +58,7 @@ router.post('/list-books', multerConfig.single('file'), async (request:Request, 
   }
   return response.status(417).send({ message: '' });
 });
+
+router.get('/getListBookAll', (request, response) => getListBookAllControllerIndex.handle(request, response));
 
 export { router };
