@@ -44,12 +44,17 @@ Running server:
 ```
 yarn dev
 ```
-
+Create table:
+```
+npx prisma migrate dev
+```
 To use csv-file-reading, follow these steps:
 
-To use send a post to the route http://localhost:PORT UTILIZED/list-books, passing a multipart, named file and a csv file.
+To use send a post to the route http://localhost:PORT UTILIZED/insertBooks, passing a multipart, named file and a csv file.
 
-obs: the code was structured based on the use example worksheet, for the test to be successful, use the example worksheet, otherwise it will be necessary to adjust the code PORTA UTILIZED
+obs: the code was structured based on the use example worksheet, for the test to be successful, use the [example](https://github.com/ReisSouza/csv-file-reading/blob/refactor/partners-solid/src/assets/atelie-catalogo-produtos.csv) worksheet, otherwise it will be necessary to adjust the code PORTA UTILIZED
+
+
 
 Modifications for use:
 1. First I created your new migration structure, in the [csv-file-reading/prisma/schema.prisma](https://github.com/ReisSouza/csv-file-reading/blob/main/prisma/schema.prisma) file run the command below.
