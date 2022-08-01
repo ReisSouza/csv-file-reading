@@ -1,3 +1,6 @@
  add no readme => npx prisma migrate dev =>  para criar tabelas 
 
  add arquivo exemplo de csv usado 
+
+
+ Tratar erros de trow e criar classes app error
