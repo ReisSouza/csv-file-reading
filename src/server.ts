@@ -1,8 +1,8 @@
 import 'dotenv/config';
 import express from 'express';
-import { router } from './routes';
+import { routerBook } from './routes';
 
 const app = express();
 
-app.use(router);
+app.use(routerBook);
 app.listen(process.env.PORT, () => console.log(`Server listening on ${process.env.PORT}`));
